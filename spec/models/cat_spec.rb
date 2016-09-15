@@ -34,8 +34,8 @@ RSpec.describe Cat, type: :model do
   end
 
   it 'should be able to learn a new hobby' do
-    cat = Cat.new(name: 'Maru', weight: 12)
-    hobby = Hobby.new(name: 'Hiding', description: 'Some cats like to hide in cardboard boxes or stick their heads in paper bags')
+    cat = Cat.create(name: 'Maru', weight: 12)
+    hobby = Hobby.create(name: 'Hiding', description: 'Some cats like to hide in cardboard boxes or stick their heads in paper bags')
 
     cat.learn_to(hobby)
     expect(cat.hobbies).to include(hobby)
