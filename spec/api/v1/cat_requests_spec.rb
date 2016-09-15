@@ -6,7 +6,7 @@ describe "Cats API" do
       Cat.create(name: 'Maru', weight: 12, temperament: 'curious')
       Cat.create(name: 'Grumpy Cat', weight: 9, temperament: 'grumpy')
 
-      get '/cats'
+      get '/api/v1/cats'
 
       expect(response).to be_success
 
