@@ -5,7 +5,7 @@ module Api
       def index
         render json: Cat.all
       end
-      
+
     end
   end
 end
