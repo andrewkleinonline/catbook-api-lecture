@@ -39,5 +39,7 @@ RSpec.describe Cat, type: :model do
 
     cat.learn_to(hobby)
     expect(cat.hobbies).to include(hobby)
+    cat.reload
+    expect(cat.hobbies).to include(hobby)
   end
 end
