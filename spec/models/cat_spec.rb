@@ -8,12 +8,16 @@ RSpec.describe Cat, type: :model do
 
   it 'should be invalid without a name' do
     bad_cat = Cat.new(weight: 10)
-    expect(bad_cat).to_not be_valid
+    bad_cat.valid?
+    expect(bad_cat.errors[:name]).to include("can't be blank")
+    # alternative: expect(bad_cat).to_not be_valid
   end
 
   it 'should be invalid without a weight' do
     weightless_cat = Cat.new(name: 'Maru')
-    expect(weightless_cat).to_not be_valid
+    weightless_cat.valid?
+    expect(weightless_cat.errors[:weight]).to include("can't be blank")
+    # alternative: expect(weightless_cat).to_not be_valid
   end
   it 'should not be fluffy be default'
   it 'should know if it is fat'
