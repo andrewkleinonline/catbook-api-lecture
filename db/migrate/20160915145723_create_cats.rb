@@ -5,7 +5,7 @@ class CreateCats < ActiveRecord::Migration[5.0]
       t.string :breed
       t.string :temperament
       t.integer :weight
-      t.boolean :fluffy
+      t.boolean :fluffy, default: false
 
       t.timestamps
     end

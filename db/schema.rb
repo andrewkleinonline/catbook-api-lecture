@@ -26,9 +26,9 @@ ActiveRecord::Schema.define(version: 20160915145827) do
     t.string   "breed"
     t.string   "temperament"
     t.integer  "weight"
-    t.boolean  "fluffy"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
+    t.boolean  "fluffy",      default: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
   end
 
   create_table "hobbies", force: :cascade do |t|
