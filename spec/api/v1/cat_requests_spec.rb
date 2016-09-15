@@ -7,6 +7,7 @@ describe "Cats API" do
       Cat.create(name: 'Grumpy Cat', weight: 9, temperament: 'grumpy')
 
       get '/api/v1/cats'
+      binding.pry
       expect(response).to be_success
       expect(JSON.parse(response.body).length).to equal(2)
 
