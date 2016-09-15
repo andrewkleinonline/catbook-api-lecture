@@ -19,7 +19,12 @@ RSpec.describe Cat, type: :model do
     expect(weightless_cat.errors[:weight]).to include("can't be blank")
     # alternative: expect(weightless_cat).to_not be_valid
   end
-  it 'should not be fluffy be default'
+  
+  it 'should not be fluffy be default' do
+    cat = Cat.new(name: 'Maru', weight: 12)
+    expect(cat.fluffy).to be(false)
+  end
+
   it 'should know if it is fat'
   it 'should be able to learn a new hobby'
 end
