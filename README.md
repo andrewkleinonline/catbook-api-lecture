@@ -1,5 +1,12 @@
 # README
 
+
+Cat has many hobbies
++ name, weight, temperament, fluffy (boolean), breed
+
+Hobby has many cats
++ name, description
+
 This README would normally document whatever steps are necessary to get the
 application up and running.
 
